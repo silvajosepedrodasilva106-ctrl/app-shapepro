@@ -1,0 +1,7 @@
+{
+  "name": "ShapePro AI - Fitness & Saúde",
+  "description": "Um SaaS de emagrecimento e fitness personalizado com IA, oferecendo planos de treino, dietas brasileiras e dashboard de evolução.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
