@@ -1,15 +1,14 @@
-
 import React, { useState, useEffect, createContext, useContext } from 'react';
-import { UserProfile, AIPersonalPlan, ProgressEntry, AppState, Goal, Level, Location } from './types';
-import Landing from './pages/Landing';
-import Onboarding from './pages/Onboarding';
-import Dashboard from './pages/Dashboard';
-import Workouts from './pages/Workouts';
-import Meals from './pages/Meals';
-import Profile from './pages/Profile';
-import Premium from './pages/Premium';
-import Checkout from './pages/Checkout';
-import Navbar from './components/Navbar';
+import { UserProfile, AIPersonalPlan, ProgressEntry, AppState, Goal, Level, Location } from './types.ts';
+import Landing from './pages/Landing.tsx';
+import Onboarding from './pages/Onboarding.tsx';
+import Dashboard from './pages/Dashboard.tsx';
+import Workouts from './pages/Workouts.tsx';
+import Meals from './pages/Meals.tsx';
+import Profile from './pages/Profile.tsx';
+import Premium from './pages/Premium.tsx';
+import Checkout from './pages/Checkout.tsx';
+import Navbar from './components/Navbar.tsx';
 
 interface AppContextType {
   state: AppState;

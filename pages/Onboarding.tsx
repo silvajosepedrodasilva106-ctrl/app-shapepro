@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
-import { useApp } from '../App';
-import { Goal, Level, Location, UserProfile } from '../types';
-import { generateFitnessPlan } from '../services/geminiService';
+import { useApp } from '../App.tsx';
+import { Goal, Level, Location, UserProfile } from '../types.ts';
+import { generateFitnessPlan } from '../services/geminiService.ts';
 import { Loader2, ArrowRight, ArrowLeft, AlertCircle } from 'lucide-react';
 
 interface OnboardingProps {
@@ -37,7 +36,7 @@ const Onboarding: React.FC<OnboardingProps> = ({ onComplete }) => {
     try {
       const fullProfile = {
         ...formData,
-        createdAt: new Date().toISOString() // Garante a data atual no envio
+        createdAt: new Date().toISOString()
       } as UserProfile;
       
       setUser(fullProfile);
