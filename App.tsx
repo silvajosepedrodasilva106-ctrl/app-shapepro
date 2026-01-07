@@ -36,9 +36,19 @@ const TRIAL_DAYS = 3;
 
 const App: React.FC = () => {
   const [state, setState] = useState<AppState>(() => {
-    const saved = localStorage.getItem('shapepro_state');
-    const parsed = saved ? JSON.parse(saved) : null;
-    return parsed || {
+    try {
+      const saved = localStorage.getItem('shapepro_state');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed && typeof parsed === 'object') {
+          return parsed;
+        }
+      }
+    } catch (e) {
+      console.error("Falha ao carregar estado salvo:", e);
+    }
+    
+    return {
       user: null,
       plan: null,
       progress: [],
